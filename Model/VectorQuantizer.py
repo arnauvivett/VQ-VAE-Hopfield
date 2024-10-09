@@ -41,4 +41,4 @@ class VectorQuantizer(nn.Module):
         
         # convert quantized from BHWC -> BCHW
         return loss, quantized.permute(0, 3, 1, 2).contiguous(), perplexity, encodings
-        
+
