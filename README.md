@@ -4,4 +4,4 @@ Relaxed version of the VQ-VAE based on modern Hopfield networks [1]. This work i
 
 [1]: https://arxiv.org/abs/2008.02217
 [2]: https://arxiv.org/abs/1711.00937
-[3]: https://github.com/MishaLaskin/vqvae 
+[3]: https://colab.research.google.com/github/zalandoresearch/pytorch-vq-vae/blob/master/vq-vae.ipynb
