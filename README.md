@@ -6,9 +6,12 @@ Relaxed version of the VQ-VAE based on modern Hopfield networks [1]. This work i
 To reproduce the results, run the scripts in the following order: 
 
 - Imported libraries
+- Hyyperparameters
+- Dataset
 - HopfieldQuantizer/VectorQuantizer/VectorQuantizerEMA (to use VectorQuantizerEMA, change decay in Hyperparams from 0 to 0.99)
 - EncoderDecoder architecture
 - ModelClass
+  
 - TrainingDynamics 
 - Validation
 - TemperatureComparisons
