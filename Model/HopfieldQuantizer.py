@@ -36,7 +36,7 @@ class VectorQuantizer(nn.Module):
         entropy = beta*torch.sum(encodings * similarity, dim=-1)
         
         #* Loss 
-        loss = F.mse_loss(quantized, inputs) + lambd*torch.mean(entropy2)
+        loss = F.mse_loss(quantized, inputs) + lambd*torch.mean(entropy)
      
         avg_probs = torch.mean(encodings, dim=0)
         dkl = (avg_probs * torch.log(avg_probs + 1e-10)) 
@@ -44,6 +44,4 @@ class VectorQuantizer(nn.Module):
 
         quantized = inputs + (quantized - inputs).detach() 
         # convert quantized from BHWC -> BCHW 
-        return loss, quantized.permute(0, 3, 1, 2).contiguous(), perplexity, lambd*torch.mean(entropy2)
-
-
+        return loss, quantized.permute(0, 3, 1, 2).contiguous(), perplexity, lambd*torch.mean(entropy) ,encodings
