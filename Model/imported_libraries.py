@@ -5,6 +5,7 @@ from tqdm import tqdm
 from __future__ import print_function
 
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 
 from scipy.signal import savgol_filter
 from scipy.ndimage import uniform_filter1d
